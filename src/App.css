@@ -1,7 +1,12 @@
 /* basic color : #63BAFF */
 
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: "Montserrat Alternates", sans-serif !important;
+    /* font-family: "Montserrat Alternates", sans-serif !important; */
+    font-family: "Montserrat", sans-serif;
 }
 
 input:focus,
@@ -26,7 +31,7 @@ button:focus {
 }
 
 .monts1 {
-    font-family: "Montserrat", sans-serif !important;
+    font-family: "Montserrat", sans-serif;
     opacity: 0.6;
 }
 

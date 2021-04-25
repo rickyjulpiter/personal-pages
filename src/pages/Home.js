@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Button } from "reactstrap";
-import NavBar from "../component/Navbar";
 import Pokemon from "../component/Pokemon";
 
 import image from "../assets/home_page.svg";
@@ -9,8 +8,6 @@ export default class Home extends Component {
     render() {
         return (
             <>
-                <NavBar />
-
                 <Container>
                     <Row>
                         <Col lg="5" md="5" className="banner-new-homepage">
