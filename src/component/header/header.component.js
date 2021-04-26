@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 import { Container, NavbarBrand, Nav, NavItem, Button } from "reactstrap";
 
 import { Link } from "react-router-dom";
@@ -34,4 +35,8 @@ const Header = ({ currentUser }) => (
     </Container>
 );
 
-export default Header;
+const mapStateToProps = (state) => ({
+    currentUser: state.user.currentUser,
+});
+
+export default connect(mapStateToProps)(Header);

@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Container, Row, Col, Button } from "reactstrap";
-import Pokemon from "../component/Pokemon";
+import Pokemon from "../../component/pokemon/pokemon.component";
 
-import image from "../assets/home_page.svg";
+import image from "../../assets/home_page.svg";
 
 export default class Home extends Component {
     render() {
