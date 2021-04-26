@@ -1,0 +1,44 @@
+.personal {
+    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../assets/personal.jpg');
+    background-size: cover;
+}
+
+.btn-github {
+    background-color: #161c23;
+    color: white;
+    font-weight: 100;
+    &:hover {
+        background-color: white;
+        color: #63BAFF;
+        font-weight: bolder;
+    }
+}
+
+.btn-linkedin {
+    background-color: #0a66c2;
+    color: white;
+    font-weight: 100;
+    &:hover {
+        background-color: white;
+        color: #63BAFF;
+        font-weight: bolder;
+    }
+}
+
+.btn-instagram {
+    background-color: #fb3958;
+    color: white;
+    font-weight: 100;
+    &:hover {
+        background-color: white;
+        color: #63BAFF;
+        font-weight: bolder;
+    }
+}
+
+.lead-text {
+    font-size: 0.95rem;
+    @media screen and (max-width: 731px) {
+        font-size: 1.25rem;
+    }
+}

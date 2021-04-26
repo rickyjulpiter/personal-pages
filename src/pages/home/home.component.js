@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Button } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import Pokemon from "../../component/pokemon/pokemon.component";
 
 import image from "../../assets/home_page.svg";
@@ -21,7 +21,9 @@ export default class Home extends Component {
                                 as E-Learning Specialist and Web Developer
                             </p>
                             <p className="text-lg-left text-sm-center">
-                                <Button color="primary">More about me</Button>
+                                <a href="/profile" className="btn btn-primary">
+                                    More about me
+                                </a>
                             </p>
                         </Col>
                         <Col lg="7" md="7">

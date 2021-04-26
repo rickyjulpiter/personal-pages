@@ -1,10 +1,16 @@
 import React, { Component } from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
-import Home from "./pages/home/home.component";
+
 import "./App.css";
+
+import Home from "./pages/home/home.component";
+import Profile from "./pages/profile/profile.component";
+
 import SignInAndSignUpPage from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component";
 import Header from "../src/component/header/header.component";
+import Footer from "../src/component/footer/footer.component";
+
 import { auth, createUserProfileDocument } from "./firebase/firebase.utils";
 
 import { setCurrentUser } from "./redux/user/user.actions";
@@ -34,22 +40,21 @@ class App extends Component {
         this.unsubscribeFromAuth();
     }
     render() {
+        const authGuard = (Component) => () => {
+            return this.props.currentUser ? (
+                <Component />
+            ) : (
+                <Redirect to="/signin" />
+            );
+        };
         return (
             <>
                 <Header />
                 <Switch>
+                    <Route exact path="/" render={authGuard(Home)} />
+                    <Route path="/profile" component={Profile} />
+
                     <Route
-                        path="/"
-                        render={() =>
-                            this.props.currentUser ? (
-                                <Home />
-                            ) : (
-                                <SignInAndSignUpPage />
-                            )
-                        }
-                    />
-                    <Route
-                        exact
                         path="/signin"
                         render={() =>
                             this.props.currentUser ? (
@@ -60,6 +65,7 @@ class App extends Component {
                         }
                     />
                 </Switch>
+                <Footer />
             </>
         );
     }
