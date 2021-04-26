@@ -1,15 +1,5 @@
 import React, { Component } from "react";
-import {
-    Card,
-    CardImg,
-    CardText,
-    CardBody,
-    CardTitle,
-    CardSubtitle,
-    Button,
-    Row,
-    Col,
-} from "reactstrap";
+import { Card, CardImg, Row, Col } from "reactstrap";
 import portofolioImage1 from "../../assets/profile/portofolio1.png";
 import portofolioImage2 from "../../assets/profile/portofolio2.png";
 import portofolioImage3 from "../../assets/profile/portofolio3.png";

@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import axios from "axios";
-import { Row } from "reactstrap";
 
 import PokemonSearch from "./pokemon-search.component";
-import PokemonCardList from "./pokemon-list";
+import PokemonList from "./pokemon-list.component";
 
 export default class Pokemon extends Component {
     constructor() {
@@ -49,9 +48,8 @@ export default class Pokemon extends Component {
                             <PokemonSearch handleChange={this.handleChange} />
                         </p>
                         <hr />
-                        <Row className="m-1">
-                            <PokemonCardList pokemons={filteredPokemon} />
-                        </Row>
+
+                        <PokemonList pokemons={filteredPokemon} />
                     </div>
                 </div>
             </>
