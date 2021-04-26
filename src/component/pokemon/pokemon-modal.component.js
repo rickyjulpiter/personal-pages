@@ -137,7 +137,7 @@ export default class PokemonModal extends Component {
             })
             .join(", ");
 
-        // Get Pokemon Description .... Is from a different end point uggh
+        // Get Pokemon Description
         await Axios.get(pokemonSpeciesUrl).then((res) => {
             let description = "";
             res.data.flavor_text_entries.some((flavor) => {
